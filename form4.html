@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form4</title>
+</head>
+<body>
+<form action="ack.html" onsubmit="return geetha()" target="_blank">
+    <label for="">username</label>
+    <input type="email" id="uname">
+    <label for="">passWord</label>
+    <input type="password" id="pwd">
+    <button>submit</button>
+    <script>
+        function geetha(){
+            let bomika=document.getElementById("uname").value;
+            let ashok=document.getElementById("pwd").value;
+        // if(bomika=="geetha@gmail.com"){
+        //     alert("enter valid email");
+        //     return false;
+        // }
+        // else if(ashok=="task"){
+        //     alert("enter valid pwd");
+        //     return false;
+        // }
+        // else{
+        //     alert("enter valid user/password");
+        // }
+let users={
+    "u1@gmail.com":"task",
+    "u2@gmail.com":"task",
+    "u3@gmail.com":"task",
+    "u4@gmail.com":"task"
+};
+
+let emailRegXp= /[a-zA-Z0-9]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2-4}}/
+if(users[bomika]&&users[bomika]==ashok){
+    alert("login sucessful");
+    window.location.href="ack.html"
+    return false;
+}
+
+
+else{
+    alert("enter valid user name/password");
+return false;
+}
+        }
+
+    </script>
+</form>
+</body>
+</html>

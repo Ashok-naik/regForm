@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form3</title>
+</head>
+<body>
+    <form action="ack.html" onsubmit="return validateForm()">
+        <label for="">userName</label>
+        <input type="email" id="userEmail">
+        <label for="">password</label>
+        <input type="password" id="userPwd">
+        <button>Submit</button>
+    </form>
+
+    <script>
+        function validateForm(){
+
+        let uName= document.getElementById("userEmail").value;
+        let uPassword=document.getElementById("userPwd").value;
+
+            if(uName=="aknaik.g@gmail.com"&&uPassword=="task"){
+
+                alert(" login sucessful");
+                return true;
+            }
+            else{
+                alert("enter valid username/password")
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>
